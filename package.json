@@ -1,0 +1,10 @@
+{
+    "name": "trenkmann.brackets-min-emacs",
+    "title": "Emacs keybindings",
+    "author": "Maximilian Trenkmann",
+    "homepage": "https://github.com/trenkmann/brackets-min-emacs.git",
+    "version": "1.0",
+    "engines": { "brackets": ">=0.39.0" },
+    "description": "A brackets extension for Emacs keybindings based on Ahmad N. Raja's brackets-emacs",
+    "keywords": ["emacs"]
+}
