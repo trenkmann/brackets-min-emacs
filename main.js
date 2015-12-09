@@ -370,7 +370,7 @@ define(function (require, exports, module) {
                     key:        "Ctrl-B",
                     callback:   moveCursor.bind(this, -1, CHAR)
                 },
-                {
+                /*{
                     id:         FORWARD_WORD,
                     name:       "Forward Word",
                     key:        "Alt-F",
@@ -381,7 +381,7 @@ define(function (require, exports, module) {
                     name:       "Backward Word",
                     key:        "Alt-B",
                     callback:   moveCursor.bind(this, -1, WORD)
-                },
+                },*/
                 {
                     id:         NEXT_LINE,
                     name:       "Next Line",
@@ -393,7 +393,19 @@ define(function (require, exports, module) {
                     name:       "Previous Line",
                     key:        "Ctrl-P",
                     callback:   moveCursor.bind(this, -1, LINE)
+                },  
+                /*{
+                    id:         NEXT_DOCUMENT,
+                    name:       "Nest Document",
+                    key:        "Alt-N",
+                    callback:   moveCursor.bind(this, -1, LINE)
                 },
+                {
+                    id:         PREVIOUS_DOCUMENT,
+                    name:       "Previous Document",
+                    key:        "Alt-P",
+                    callback:   moveCursor.bind(this, -1, LINE)
+                }, */               
                 /*{
                     id:         UPCASE_REGION,
                     name:       "Change to Upper",
@@ -466,27 +478,27 @@ define(function (require, exports, module) {
                     name:       "Comment (Do What I Mean)",
                     key:        "Alt-;",
                     overrideId:   Commands.EDIT_LINE_COMMENT
-                },
+                },*/
                 {
                     id:         ISEARCH_FORWARD,
                     name:       "ISearch Forward",
-                    key:        "Ctrl-S",
+                    key:        "Alt-F",
                     overrideId:   Commands.CMD_FIND,
                     commands: [
                         {
                             id:         ISEARCH_FORWARD_AGAIN,
-                            key:        "Ctrl-S",
+                            key:        "Alt-F",
                             overrideId: Commands.CMD_FIND_NEXT,
                             repeatable: true
                         },
                         {
                             id:         ISEARCH_BACKWARD,
-                            key:        "Ctrl-R",
+                            key:        "Alt-R",
                             overrideId: Commands.CMD_FIND_PREVIOUS,
                             repeatable: true
                         }
                     ]
-                },*/
+                },
                 {
                     id:         SET_MARK_COMMAND,
                     name:       "Set Mark Command",
